@@ -18,7 +18,7 @@ export function DiagnosticSection() {
   return (
     <section
       id="diagnostico"
-      className="bg-[#0B1F3B] py-20"
+      className="bg-[#0047FF] py-20"
       aria-labelledby="diagnostic-heading"
     >
       <div className="max-w-3xl mx-auto px-6">
