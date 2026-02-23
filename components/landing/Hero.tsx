@@ -31,17 +31,18 @@ export function Hero({ onStartDiagnostic }: HeroProps) {
         {/* Badge */}
         <div className="inline-flex items-center gap-2 bg-[#0047FF]/10 border border-[#0047FF]/20 text-white/70 text-sm font-medium px-4 py-1.5 rounded-full mb-8">
           <span className="w-2 h-2 rounded-full bg-[#0047FF] animate-pulse" />
-          FinOps + GenAI Cost Control
+          FinOps + Governança de GenAI para o mercado brasileiro
         </div>
 
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight text-balance mb-6">
-          Controle seus custos de cloud e GenAI{" "}
-          <span className="text-[#0047FF]">antes que eles controlem você.</span>
+          Sua empresa está desperdiçando{" "}
+          <span className="text-[#0047FF]">até 35% do orçamento de cloud.</span>
         </h1>
 
         <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-10 leading-relaxed">
-          Diagnóstico inteligente em 30 segundos. Sem formulário. Sem acesso ao
-          seu ambiente.
+          Diagnóstico executivo gratuito em 30 segundos. Sem formulário, sem
+          acesso ao seu ambiente. Resultado calibrado pelos benchmarks do
+          FinOps Foundation 2026 para o seu setor no Brasil.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -64,26 +65,29 @@ export function Hero({ onStartDiagnostic }: HeroProps) {
                 </svg>
               }
             >
-              Começar diagnóstico
+              Fazer diagnóstico agora — é grátis
             </CTAButton>
           </a>
           <p className="text-sm text-white/50">
-            Grátis · Sem cadastro · Resultado imediato
+            Grátis · Sem cadastro · Resultado em 30 segundos
           </p>
         </div>
 
         {/* Stats bar */}
         <div className="mt-16 grid grid-cols-3 gap-6 max-w-2xl mx-auto">
           {[
-            { value: "30s", label: "Tempo médio" },
-            { value: "35%", label: "Redução média de custo" },
-            { value: "100%", label: "Sem acesso ao ambiente" },
+            { value: "30s", label: "Para concluir o diagnóstico", source: null },
+            { value: "35%", label: "Desperdício médio em cloud no Brasil", source: "BCG 2025" },
+            { value: "100%", label: "Sem acesso ao seu ambiente", source: null },
           ].map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="text-2xl md:text-3xl font-black text-white">
                 {stat.value}
               </div>
               <div className="text-xs text-white/50 mt-1">{stat.label}</div>
+              {stat.source && (
+                <div className="text-[10px] text-white/25 mt-0.5">{stat.source}</div>
+              )}
             </div>
           ))}
         </div>
