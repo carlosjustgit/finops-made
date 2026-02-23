@@ -1,0 +1,87 @@
+import { CTAButton } from "@/components/ui/CTAButton";
+
+interface HeroProps {
+  onStartDiagnostic?: () => void;
+}
+
+export function Hero({ onStartDiagnostic }: HeroProps) {
+  return (
+    <section
+      className="relative bg-[#0B1F3B] text-white overflow-hidden"
+      aria-label="Hero"
+    >
+      {/* Background grid pattern */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 opacity-[0.04]"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)",
+          backgroundSize: "40px 40px",
+        }}
+      />
+
+      <div className="relative max-w-5xl mx-auto px-6 py-20 md:py-28 text-center">
+        {/* Badge */}
+        <div className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 text-blue-300 text-sm font-medium px-4 py-1.5 rounded-full mb-8">
+          <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
+          FinOps + GenAI Cost Control
+        </div>
+
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight text-balance mb-6">
+          Controle seus custos de cloud e GenAI{" "}
+          <span className="text-[#1E4DFF]">antes que eles controlem você.</span>
+        </h1>
+
+        <p className="text-lg md:text-xl text-blue-100/80 max-w-2xl mx-auto mb-10 leading-relaxed">
+          Diagnóstico inteligente em 30 segundos. Sem formulário. Sem acesso ao
+          seu ambiente.
+        </p>
+
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#diagnostico">
+            <CTAButton
+              variant="primary"
+              onClick={onStartDiagnostic}
+              icon={
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  className="w-5 h-5"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              }
+            >
+              Começar diagnóstico
+            </CTAButton>
+          </a>
+          <p className="text-sm text-blue-200/60">
+            Grátis · Sem cadastro · Resultado imediato
+          </p>
+        </div>
+
+        {/* Stats bar */}
+        <div className="mt-16 grid grid-cols-3 gap-6 max-w-2xl mx-auto">
+          {[
+            { value: "30s", label: "Tempo médio" },
+            { value: "35%", label: "Redução média de custo" },
+            { value: "100%", label: "Sem acesso ao ambiente" },
+          ].map((stat) => (
+            <div key={stat.label} className="text-center">
+              <div className="text-2xl md:text-3xl font-black text-white">
+                {stat.value}
+              </div>
+              <div className="text-xs text-blue-200/60 mt-1">{stat.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
