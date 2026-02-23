@@ -56,7 +56,7 @@ export function QuestionStep({
       </h3>
 
       {isMulti && (
-        <p className="text-sm text-blue-200/60">
+        <p className="text-sm text-white/50">
           Selecione até {question.maxSelect} opções
         </p>
       )}
@@ -76,10 +76,10 @@ export function QuestionStep({
                   : handleSingleSelect(option.value)
               }
               className={[
-                "w-full text-left px-5 py-4 rounded-xl border font-medium text-sm transition-all duration-150 cursor-pointer",
+                "w-full text-left px-5 py-4 border font-medium text-sm transition-all duration-150 cursor-pointer",
                 isActive
-                  ? "bg-[#1E4DFF] border-[#1E4DFF] text-white shadow-lg shadow-blue-500/20"
-                  : "bg-white/5 border-white/10 text-blue-100 hover:bg-white/10 hover:border-white/20",
+                  ? "bg-[#0047FF] border-[#0047FF] text-white"
+                  : "bg-white/5 border-white/10 text-white/80 hover:bg-white/10 hover:border-white/20",
               ]
                 .filter(Boolean)
                 .join(" ")}
@@ -118,7 +118,7 @@ export function QuestionStep({
             variant="ghost"
             size="sm"
             onClick={onBack}
-            className="text-blue-300/70 hover:text-blue-200 hover:bg-white/5"
+            className="text-white/50 hover:text-white/80 hover:bg-white/5"
           >
             ← Voltar
           </Button>

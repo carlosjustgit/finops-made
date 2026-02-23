@@ -8,7 +8,7 @@ const DiagnosticTool = dynamic(
     ssr: false,
     loading: () => (
       <div className="min-h-[400px] flex items-center justify-center">
-        <div className="w-8 h-8 border-2 border-[#1E4DFF] border-t-transparent rounded-full animate-spin" />
+        <div className="w-8 h-8 border-2 border-[#0047FF] border-t-transparent rounded-full animate-spin" />
       </div>
     ),
   }
@@ -29,7 +29,7 @@ export function DiagnosticSection() {
           >
             Faça seu diagnóstico agora
           </h2>
-          <p className="text-blue-100/70 text-lg">
+          <p className="text-white/60 text-lg">
             30 segundos. Resultado executivo imediato. Sem acesso ao seu
             ambiente.
           </p>

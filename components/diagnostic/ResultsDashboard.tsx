@@ -18,7 +18,7 @@ interface ResultsDashboardProps {
 const fitLabels: Record<FitTier, { label: string; color: string; bg: string }> = {
   high: { label: "Alto potencial", color: "text-green-400", bg: "bg-green-400/10 border-green-400/20" },
   medium: { label: "Potencial médio", color: "text-amber-400", bg: "bg-amber-400/10 border-amber-400/20" },
-  low: { label: "Potencial inicial", color: "text-blue-400", bg: "bg-blue-400/10 border-blue-400/20" },
+  low: { label: "Potencial inicial", color: "text-[#0047FF]", bg: "bg-[#0047FF]/10 border-[#0047FF]/20" },
 };
 
 export function ResultsDashboard({
@@ -39,13 +39,13 @@ export function ResultsDashboard({
   return (
     <div className="space-y-6 transition-opacity duration-200">
       {/* Header */}
-      <div className="bg-white/5 border border-white/10 rounded-2xl p-6">
+      <div className="bg-white/5 border border-white/10 p-6">
         <div className="flex items-start justify-between gap-4 mb-6">
           <div>
             <h3 className="text-xl font-black text-white mb-1">
               Diagnóstico concluído
             </h3>
-            <p className="text-blue-200/60 text-sm">
+            <p className="text-white/50 text-sm">
               Resultado baseado em benchmarks de mercado para o seu perfil
             </p>
           </div>
@@ -76,16 +76,16 @@ export function ResultsDashboard({
         </div>
 
         {/* Opportunity banner */}
-        <div className="mt-6 bg-[#1E4DFF]/10 border border-[#1E4DFF]/20 rounded-xl px-5 py-4 text-center">
-          <p className="text-blue-200/70 text-xs uppercase tracking-wider font-semibold mb-1">
+        <div className="mt-6 bg-[#0047FF]/10 border border-[#0047FF]/20 px-5 py-4 text-center">
+          <p className="text-white/60 text-xs uppercase tracking-wider font-semibold mb-1">
             Oportunidade estimada de otimização / mês
           </p>
           <p className="text-2xl font-black text-white">
             {opportunity.low}{" "}
-            <span className="text-blue-300/60 text-lg font-bold">→</span>{" "}
+            <span className="text-white/40 text-lg font-bold">→</span>{" "}
             {opportunity.high}
           </p>
-          <p className="text-blue-200/40 text-xs mt-1">
+          <p className="text-white/40 text-xs mt-1">
             {optimization_opportunity.low_pct.toFixed(0)}–
             {optimization_opportunity.high_pct.toFixed(0)}% do gasto mensal em
             cloud
@@ -100,12 +100,12 @@ export function ResultsDashboard({
       <RiskChecklist risks={risk_flags} />
 
       {/* CTAs */}
-      <div className="bg-white/5 border border-white/10 rounded-2xl p-6 space-y-4">
+      <div className="bg-white/5 border border-white/10 p-6 space-y-4">
         <div className="text-center mb-2">
           <h4 className="text-lg font-bold text-white mb-1">
             Próximo passo recomendado
           </h4>
-          <p className="text-blue-200/60 text-sm">
+          <p className="text-white/50 text-sm">
             Agende uma revisão executiva e transforme esse diagnóstico em um
             plano de ação validado.
           </p>
@@ -145,7 +145,7 @@ export function ResultsDashboard({
 
         <button
           onClick={onReset}
-          className="w-full text-center text-xs text-blue-200/30 hover:text-blue-200/60 transition-colors py-1"
+          className="w-full text-center text-xs text-white/30 hover:text-white/60 transition-colors py-1"
         >
           Refazer diagnóstico
         </button>

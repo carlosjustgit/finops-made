@@ -42,7 +42,7 @@ export function FAQSection() {
           {faqs.map((faq, i) => (
             <div
               key={faq.question}
-              className="border border-[#E8ECF4] rounded-xl overflow-hidden"
+              className="border border-[#E8ECF4] overflow-hidden"
             >
               <dt>
                 <button

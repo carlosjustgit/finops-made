@@ -6,8 +6,8 @@ export function SkeletonLoader() {
       aria-label="Analisando seus dados..."
     >
       <div className="text-center space-y-3">
-        <div className="w-12 h-12 rounded-full border-4 border-[#1E4DFF] border-t-transparent animate-spin mx-auto" />
-        <p className="text-blue-100/70 text-sm font-medium">
+        <div className="w-12 h-12 rounded-full border-4 border-[#0047FF] border-t-transparent animate-spin mx-auto" />
+        <p className="text-white/60 text-sm font-medium">
           Analisando seu perfil com benchmarks de mercado...
         </p>
       </div>

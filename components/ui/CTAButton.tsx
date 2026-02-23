@@ -17,13 +17,13 @@ export function CTAButton({
   ...props
 }: CTAButtonProps) {
   const base =
-    "inline-flex items-center justify-center gap-2 font-bold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed rounded-xl";
+    "inline-flex items-center justify-center gap-2 font-bold transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed";
 
   const variants = {
     primary:
-      "bg-[#1E4DFF] text-white px-8 py-4 text-base hover:bg-blue-700 active:scale-95 shadow-lg shadow-blue-500/25 focus-visible:ring-blue-500",
+      "bg-[#0047FF] text-white px-8 py-4 text-base hover:bg-[#0038CC] active:scale-95 focus-visible:ring-[#0047FF]",
     secondary:
-      "bg-white text-[#0B1F3B] border-2 border-[#C8D0E0] px-8 py-4 text-base hover:border-[#1E4DFF] hover:text-[#1E4DFF] active:scale-95 focus-visible:ring-[#1E4DFF]",
+      "bg-white text-[#0B1F3B] border-2 border-[#C8D0E0] px-8 py-4 text-base hover:border-[#0047FF] hover:text-[#0047FF] active:scale-95 focus-visible:ring-[#0047FF]",
   };
 
   return (

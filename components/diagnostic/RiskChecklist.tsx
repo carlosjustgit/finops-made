@@ -10,10 +10,10 @@ export function RiskChecklist({ risks }: RiskChecklistProps) {
 
   return (
     <div className="space-y-3">
-      <h4 className="text-sm font-bold text-blue-200/70 uppercase tracking-widest">
+      <h4 className="text-sm font-bold text-white/50 uppercase tracking-widest">
         Checklist de riscos
       </h4>
-      <div className="bg-white/5 border border-white/10 rounded-xl divide-y divide-white/5">
+      <div className="bg-white/5 border border-white/10 divide-y divide-white/5">
         {[...activeRisks, ...inactiveRisks].map((risk, i) => (
           <div
             key={i}
@@ -38,7 +38,7 @@ export function RiskChecklist({ risks }: RiskChecklistProps) {
             </div>
             <span
               className={`text-sm ${
-                risk.present ? "text-red-300" : "text-blue-200/50 line-through"
+                risk.present ? "text-red-300" : "text-white/40 line-through"
               }`}
             >
               {risk.label}

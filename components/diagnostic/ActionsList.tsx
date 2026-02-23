@@ -7,13 +7,13 @@ interface ActionsListProps {
 const impactConfig = {
   high: { label: "Alto impacto", color: "text-green-400", bg: "bg-green-400/10" },
   medium: { label: "Médio impacto", color: "text-amber-400", bg: "bg-amber-400/10" },
-  low: { label: "Baixo impacto", color: "text-blue-400", bg: "bg-blue-400/10" },
+  low: { label: "Baixo impacto", color: "text-[#0047FF]", bg: "bg-[#0047FF]/10" },
 };
 
 export function ActionsList({ actions }: ActionsListProps) {
   return (
     <div className="space-y-3">
-      <h4 className="text-sm font-bold text-blue-200/70 uppercase tracking-widest">
+      <h4 className="text-sm font-bold text-white/50 uppercase tracking-widest">
         Top 3 ações — próximos 30 dias
       </h4>
       <div className="space-y-3">
@@ -22,10 +22,10 @@ export function ActionsList({ actions }: ActionsListProps) {
           return (
             <div
               key={i}
-              className="bg-white/5 border border-white/10 rounded-xl p-4 flex gap-4"
+              className="bg-white/5 border border-white/10 p-4 flex gap-4"
             >
-              <div className="w-8 h-8 rounded-lg bg-[#1E4DFF]/20 text-[#1E4DFF] flex items-center justify-center shrink-0 mt-0.5">
-                <span className="text-xs font-black text-blue-300">
+              <div className="w-8 h-8 flex items-center justify-center shrink-0 mt-0.5">
+                <span className="text-xs font-black text-[#0047FF]">
                   {String(i + 1).padStart(2, "0")}
                 </span>
               </div>
@@ -40,7 +40,7 @@ export function ActionsList({ actions }: ActionsListProps) {
                     {impact.label}
                   </span>
                 </div>
-                <p className="text-xs text-blue-200/60 leading-relaxed">
+                <p className="text-xs text-white/50 leading-relaxed">
                   {action.description}
                 </p>
               </div>

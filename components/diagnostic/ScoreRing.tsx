@@ -68,7 +68,7 @@ export function ScoreRing({ score, label, sublabel }: ScoreRingProps) {
       <div className="text-center">
         <div className="text-sm font-semibold text-white">{label}</div>
         {sublabel && (
-          <div className="text-xs text-blue-200/50 mt-0.5">{sublabel}</div>
+          <div className="text-xs text-white/40 mt-0.5">{sublabel}</div>
         )}
         <div
           className="text-xs font-bold mt-1"

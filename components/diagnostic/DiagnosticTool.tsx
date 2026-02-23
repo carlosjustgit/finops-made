@@ -160,14 +160,14 @@ export default function DiagnosticTool() {
   // IDLE phase — just the start CTA
   if (state.phase === "idle") {
     return (
-      <div className="bg-white/5 border border-white/10 rounded-2xl p-8 text-center">
-        <div className="w-16 h-16 rounded-2xl bg-[#1E4DFF]/20 text-[#1E4DFF] flex items-center justify-center mx-auto mb-6">
+      <div className="bg-white/5 border border-white/10 p-8 text-center">
+        <div className="flex items-center justify-center mx-auto mb-6">
           <svg
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
             strokeWidth={1.5}
-            className="w-8 h-8 text-blue-300"
+            className="w-10 h-10 text-[#0047FF]"
           >
             <path
               strokeLinecap="round"
@@ -179,7 +179,7 @@ export default function DiagnosticTool() {
         <h3 className="text-xl font-bold text-white mb-3">
           Diagnóstico FinOps & GenAI
         </h3>
-        <p className="text-blue-100/60 text-sm mb-8 max-w-sm mx-auto">
+        <p className="text-white/50 text-sm mb-8 max-w-sm mx-auto">
           8 perguntas. 30 segundos. Score de maturidade e plano de ação
           executivo. Sem acesso ao seu ambiente.
         </p>
@@ -210,7 +210,7 @@ export default function DiagnosticTool() {
   // LOADING phase
   if (state.phase === "loading") {
     return (
-      <div className="bg-white/5 border border-white/10 rounded-2xl overflow-hidden">
+      <div className="bg-white/5 border border-white/10 overflow-hidden">
         <SkeletonLoader />
       </div>
     );
@@ -219,8 +219,8 @@ export default function DiagnosticTool() {
   // ERROR phase
   if (state.phase === "error") {
     return (
-      <div className="bg-white/5 border border-white/10 rounded-2xl p-8 text-center space-y-4">
-        <div className="w-12 h-12 rounded-full bg-red-500/10 flex items-center justify-center mx-auto">
+      <div className="bg-white/5 border border-white/10 p-8 text-center space-y-4">
+        <div className="flex items-center justify-center mx-auto">
           <svg
             viewBox="0 0 24 24"
             fill="none"
@@ -238,7 +238,7 @@ export default function DiagnosticTool() {
         <h3 className="text-white font-bold">
           Diagnóstico temporariamente indisponível
         </h3>
-        <p className="text-blue-200/60 text-sm">
+        <p className="text-white/50 text-sm">
           Nosso servidor de análise está sobrecarregado. Fale diretamente com
           um especialista.
         </p>
@@ -277,7 +277,7 @@ export default function DiagnosticTool() {
   const currentAnswer = state.answers[question.id];
 
   return (
-    <div className="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8">
+    <div className="bg-white/5 border border-white/10 p-6 md:p-8">
       <Stepper currentStep={state.currentStep} />
       <QuestionStep
         question={question}
