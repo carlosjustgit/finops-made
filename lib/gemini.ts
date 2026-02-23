@@ -12,7 +12,7 @@ const MODEL_NAME = "gemini-3-flash-preview";
 const MAX_RETRIES = 1;
 
 function getClient(): GoogleGenerativeAI {
-  const apiKey = process.env.GEMINI_API_KEY;
+  const apiKey = process.env.GEMINI_API_KEY?.trim();
   if (!apiKey) {
     throw new Error("GEMINI_API_KEY environment variable is not set");
   }
@@ -87,9 +87,10 @@ export async function runDiagnostic(
         const result = await callGemini(input, controller.signal);
         return result;
       } catch (err) {
+        const msg = err instanceof Error ? err.message : String(err);
+        console.error(`Gemini attempt ${attempt} failed: ${msg}`);
         const isLastAttempt = attempt === MAX_RETRIES;
         if (isLastAttempt) throw err;
-        // brief pause before retry
         await new Promise((r) => setTimeout(r, 500));
       }
     }
