@@ -2,6 +2,7 @@ import {
   GoogleGenerativeAI,
   HarmBlockThreshold,
   HarmCategory,
+  SchemaType,
 } from "@google/generative-ai";
 import { buildSystemPrompt, buildUserPrompt } from "@/lib/prompt";
 import { DiagnosticResultSchema } from "@/lib/validation";
@@ -33,49 +34,49 @@ async function callGemini(
       maxOutputTokens: 8000,
       responseMimeType: "application/json",
       responseSchema: {
-        type: "object" as const,
+        type: SchemaType.OBJECT,
         properties: {
           scores: {
-            type: "object" as const,
+            type: SchemaType.OBJECT,
             properties: {
-              finops_maturity: { type: "integer" as const },
-              data_governance: { type: "integer" as const },
-              genai_control: { type: "integer" as const },
+              finops_maturity: { type: SchemaType.INTEGER },
+              data_governance: { type: SchemaType.INTEGER },
+              genai_control: { type: SchemaType.INTEGER },
             },
             required: ["finops_maturity", "data_governance", "genai_control"],
           },
           optimization_opportunity: {
-            type: "object" as const,
+            type: SchemaType.OBJECT,
             properties: {
-              low_pct: { type: "number" as const },
-              high_pct: { type: "number" as const },
+              low_pct: { type: SchemaType.NUMBER },
+              high_pct: { type: SchemaType.NUMBER },
             },
             required: ["low_pct", "high_pct"],
           },
           top_actions: {
-            type: "array" as const,
+            type: SchemaType.ARRAY,
             items: {
-              type: "object" as const,
+              type: SchemaType.OBJECT,
               properties: {
-                title: { type: "string" as const },
-                description: { type: "string" as const },
-                impact: { type: "string" as const, enum: ["high", "medium", "low"] },
+                title: { type: SchemaType.STRING },
+                description: { type: SchemaType.STRING },
+                impact: { type: SchemaType.STRING, enum: ["high", "medium", "low"] },
               },
               required: ["title", "description", "impact"],
             },
           },
           risk_flags: {
-            type: "array" as const,
+            type: SchemaType.ARRAY,
             items: {
-              type: "object" as const,
+              type: SchemaType.OBJECT,
               properties: {
-                label: { type: "string" as const },
-                present: { type: "boolean" as const },
+                label: { type: SchemaType.STRING },
+                present: { type: SchemaType.BOOLEAN },
               },
               required: ["label", "present"],
             },
           },
-          fit_tier: { type: "string" as const, enum: ["high", "medium", "low"] },
+          fit_tier: { type: SchemaType.STRING, enum: ["high", "medium", "low"] },
         },
         required: ["scores", "optimization_opportunity", "top_actions", "risk_flags", "fit_tier"],
       },
