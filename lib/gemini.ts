@@ -8,7 +8,7 @@ import { DiagnosticResultSchema } from "@/lib/validation";
 import type { ValidatedDiagnosticRequest } from "@/lib/validation";
 import type { DiagnosticResult } from "@/types/diagnostic";
 
-const MODEL_NAME = "gemini-2.0-flash";
+const MODEL_NAME = "gemini-3-flash-preview";
 const MAX_RETRIES = 1;
 
 function getClient(): GoogleGenerativeAI {
