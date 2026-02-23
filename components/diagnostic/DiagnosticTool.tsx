@@ -160,14 +160,14 @@ export default function DiagnosticTool() {
   // IDLE phase — just the start CTA
   if (state.phase === "idle") {
     return (
-      <div className="bg-white/5 border border-white/10 p-8 text-center">
+      <div className="bg-white/15 border border-white/30 p-8 text-center">
         <div className="flex items-center justify-center mx-auto mb-6">
           <svg
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
             strokeWidth={1.5}
-            className="w-10 h-10 text-[#0047FF]"
+            className="w-10 h-10 text-white"
           >
             <path
               strokeLinecap="round"
@@ -179,12 +179,12 @@ export default function DiagnosticTool() {
         <h3 className="text-xl font-bold text-white mb-3">
           Diagnóstico FinOps & GenAI
         </h3>
-        <p className="text-white/50 text-sm mb-8 max-w-sm mx-auto">
+        <p className="text-white/70 text-sm mb-8 max-w-sm mx-auto">
           8 perguntas. 30 segundos. Score de maturidade e plano de ação
           executivo. Sem acesso ao seu ambiente.
         </p>
         <CTAButton
-          variant="primary"
+          variant="white"
           onClick={handleStart}
           icon={
             <svg

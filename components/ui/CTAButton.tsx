@@ -3,7 +3,7 @@
 import { ButtonHTMLAttributes } from "react";
 
 interface CTAButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "white";
   fullWidth?: boolean;
   icon?: React.ReactNode;
 }
@@ -24,6 +24,8 @@ export function CTAButton({
       "bg-[#0047FF] text-white px-8 py-4 text-base hover:bg-[#0038CC] active:scale-95 focus-visible:ring-[#0047FF]",
     secondary:
       "bg-white text-[#0B1F3B] border-2 border-[#C8D0E0] px-8 py-4 text-base hover:border-[#0047FF] hover:text-[#0047FF] active:scale-95 focus-visible:ring-[#0047FF]",
+    white:
+      "bg-white text-[#0047FF] px-8 py-4 text-base hover:bg-white/90 active:scale-95 focus-visible:ring-white",
   };
 
   return (
