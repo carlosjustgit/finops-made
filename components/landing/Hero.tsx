@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { CTAButton } from "@/components/ui/CTAButton";
 
 interface HeroProps {
@@ -10,15 +11,20 @@ export function Hero({ onStartDiagnostic }: HeroProps) {
       className="relative bg-[#0B1F3B] text-white overflow-hidden"
       aria-label="Hero"
     >
-      {/* Background grid pattern */}
+      {/* Background image */}
+      <Image
+        src="/banner.webp"
+        alt=""
+        fill
+        priority
+        quality={85}
+        className="object-cover object-center"
+        aria-hidden="true"
+      />
+      {/* Dark overlay so text stays readable */}
       <div
         aria-hidden="true"
-        className="absolute inset-0 opacity-[0.04]"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)",
-          backgroundSize: "40px 40px",
-        }}
+        className="absolute inset-0 bg-[#0B1F3B]/70"
       />
 
       <div className="relative max-w-5xl mx-auto px-6 py-20 md:py-28 text-center">
