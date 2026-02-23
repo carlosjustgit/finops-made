@@ -40,6 +40,9 @@ export const metadata: Metadata = {
     description:
       "Diagnóstico gratuito em 30 segundos para avaliar custos de cloud e governança de IA. Sem formulário.",
   },
+  icons: {
+    icon: "/favicon.svg",
+  },
   robots: {
     index: true,
     follow: true,
