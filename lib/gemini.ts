@@ -30,8 +30,55 @@ async function callGemini(
     systemInstruction: buildSystemPrompt(),
     generationConfig: {
       temperature: 0.2,
-      maxOutputTokens: 1000,
+      maxOutputTokens: 8000,
       responseMimeType: "application/json",
+      responseSchema: {
+        type: "object" as const,
+        properties: {
+          scores: {
+            type: "object" as const,
+            properties: {
+              finops_maturity: { type: "integer" as const },
+              data_governance: { type: "integer" as const },
+              genai_control: { type: "integer" as const },
+            },
+            required: ["finops_maturity", "data_governance", "genai_control"],
+          },
+          optimization_opportunity: {
+            type: "object" as const,
+            properties: {
+              low_pct: { type: "number" as const },
+              high_pct: { type: "number" as const },
+            },
+            required: ["low_pct", "high_pct"],
+          },
+          top_actions: {
+            type: "array" as const,
+            items: {
+              type: "object" as const,
+              properties: {
+                title: { type: "string" as const },
+                description: { type: "string" as const },
+                impact: { type: "string" as const, enum: ["high", "medium", "low"] },
+              },
+              required: ["title", "description", "impact"],
+            },
+          },
+          risk_flags: {
+            type: "array" as const,
+            items: {
+              type: "object" as const,
+              properties: {
+                label: { type: "string" as const },
+                present: { type: "boolean" as const },
+              },
+              required: ["label", "present"],
+            },
+          },
+          fit_tier: { type: "string" as const, enum: ["high", "medium", "low"] },
+        },
+        required: ["scores", "optimization_opportunity", "top_actions", "risk_flags", "fit_tier"],
+      },
     },
     safetySettings: [
       {
@@ -79,7 +126,7 @@ export async function runDiagnostic(
   input: ValidatedDiagnosticRequest
 ): Promise<DiagnosticResult> {
   const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 25000);
+  const timeoutId = setTimeout(() => controller.abort(), 50000);
 
   try {
     for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
