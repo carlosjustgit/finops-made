@@ -19,9 +19,4 @@
       ]
     }
   ],
-  "functions": {
-    "app/api/diagnostic/route.ts": {
-      "maxDuration": 30
-    }
-  }
 }
