@@ -6,21 +6,21 @@ const steps = [
     icon: MousePointerClick,
     title: "8 perguntas, tudo por clique",
     description:
-      "Provedor de cloud, faixa de gasto mensal, setor e seus maiores desafios. Nenhum campo de texto, nenhum acesso ao seu ambiente. Você termina em menos de 30 segundos — no celular ou no computador.",
+      "Provedor de cloud, faixa de gasto mensal, setor e seus maiores desafios. Nenhum campo de texto, nenhum acesso ao seu ambiente. Você termina em menos de 30 segundos, no celular ou no computador.",
   },
   {
     number: "02",
     icon: BarChart3,
     title: "IA compara com benchmarks do seu setor",
     description:
-      "Nossa IA cruza seu perfil com os benchmarks do FinOps Foundation State of FinOps 2026 para o seu segmento e faixa de gasto. O resultado não é genérico — é calibrado para a realidade de empresas brasileiras com o mesmo perfil que o seu.",
+      "Nossa IA cruza seu perfil com os benchmarks do FinOps Foundation State of FinOps 2026 para o seu segmento e faixa de gasto. O resultado não é genérico: é calibrado para a realidade de empresas brasileiras com o mesmo perfil que o seu.",
   },
   {
     number: "03",
     icon: FileCheck,
     title: "Plano executivo em segundos",
     description:
-      "Score de maturidade FinOps, governança de dados e controle de GenAI (0–100). Estimativa de economia em R$/mês. E 3 ações concretas para os próximos 30 dias — específicas para o seu provedor, setor e nível de maturidade.",
+      "Score de maturidade FinOps, governança de dados e controle de GenAI (0–100). Estimativa de economia em R$/mês. E 3 ações concretas para os próximos 30 dias, específicas para o seu provedor, setor e nível de maturidade.",
   },
 ];
 

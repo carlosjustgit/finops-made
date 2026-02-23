@@ -65,7 +65,7 @@ export function Hero({ onStartDiagnostic }: HeroProps) {
                 </svg>
               }
             >
-              Fazer diagnóstico agora — é grátis
+              Fazer diagnóstico agora (é grátis)
             </CTAButton>
           </a>
           <p className="text-sm text-white/50">

@@ -89,7 +89,7 @@ export async function generateDiagnosticPdf(
   doc.setFontSize(10);
   doc.setFont("helvetica", "bold");
   doc.setTextColor(...WHITE);
-  doc.text("Diagnóstico FinOps & GenAI — Relatório Executivo", pw - 14, 16, { align: "right" });
+  doc.text("Diagnóstico FinOps & GenAI · Relatório Executivo", pw - 14, 16, { align: "right" });
 
   const today = new Date().toLocaleDateString("pt-BR", { day: "2-digit", month: "long", year: "numeric" });
   doc.setFontSize(8);

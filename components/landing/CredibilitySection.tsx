@@ -34,7 +34,7 @@ export function CredibilitySection() {
           <p className="text-[#7A8BA8] text-lg max-w-2xl mx-auto">
             A Made é uma consultoria tecnológica brasileira especializada em
             arquitetura cloud, FinOps e governança de IA para grandes empresas.
-            Não somos uma ferramenta genérica — somos especialistas que conhecem
+            Não somos uma ferramenta genérica: somos especialistas que conhecem
             os desafios reais do mercado brasileiro.
           </p>
         </div>
@@ -82,7 +82,7 @@ export function CredibilitySection() {
             <strong>CloudZero FinOps in the AI Era 2026</strong> e análises da{" "}
             <strong>BCG Cloud Waste Report 2025</strong>. Os scores são
             calculados comparando o perfil da empresa com a mediana do seu setor
-            — não são estimativas genéricas.
+            ; não são estimativas genéricas.
           </p>
         </div>
       </div>

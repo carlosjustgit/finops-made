@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "pt_BR",
     url: BASE_URL,
-    siteName: "Made — FinOps & GenAI para empresas enterprise",
+    siteName: "Made · FinOps & GenAI para empresas enterprise",
     title: "Diagnóstico FinOps e GenAI para empresas enterprise no Brasil",
     description:
       "Descubra em 30 segundos quanto sua empresa está desperdiçando em cloud e IA Generativa. Diagnóstico gratuito, sem formulário, resultado executivo imediato.",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
         url: `${BASE_URL}/banner.webp`,
         width: 1200,
         height: 630,
-        alt: "Diagnóstico FinOps e GenAI — Made",
+        alt: "Diagnóstico FinOps e GenAI · Made",
       },
     ],
   },
@@ -124,7 +124,7 @@ const webSiteSchema = {
   "@type": "WebSite",
   "@id": `${BASE_URL}/#website`,
   url: BASE_URL,
-  name: "Made — Diagnóstico FinOps & GenAI",
+  name: "Made · Diagnóstico FinOps & GenAI",
   inLanguage: "pt-BR",
   publisher: { "@id": `${BASE_URL}/#organization` },
 };
@@ -159,7 +159,7 @@ const softwareAppSchema = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "@id": `${BASE_URL}/#tool`,
-  name: "Diagnóstico FinOps e GenAI — Made",
+  name: "Diagnóstico FinOps e GenAI · Made",
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web",
   inLanguage: "pt-BR",
@@ -199,7 +199,7 @@ const howToSchema = {
       "@type": "HowToStep",
       position: 1,
       name: "Responda 8 perguntas objetivas",
-      text: "Selecione seu provedor de cloud (AWS, Azure ou GCP), faixa de gasto mensal, setor da empresa e principais desafios. Tudo por clique — sem campos de texto, sem acesso ao ambiente, pronto em menos de 30 segundos.",
+      text: "Selecione seu provedor de cloud (AWS, Azure ou GCP), faixa de gasto mensal, setor da empresa e principais desafios. Tudo por clique: sem campos de texto, sem acesso ao ambiente, pronto em menos de 30 segundos.",
       url: `${BASE_URL}/#diagnostico`,
     },
     {
@@ -213,7 +213,7 @@ const howToSchema = {
       "@type": "HowToStep",
       position: 3,
       name: "Receba seu plano executivo imediato",
-      text: "Em segundos você recebe: scores de maturidade (0-100), estimativa de oportunidade de economia em R$ por mês, e 3 ações concretas e específicas para os próximos 30 dias — calibradas para o seu provedor, setor e nível de gasto.",
+      text: "Em segundos você recebe: scores de maturidade (0-100), estimativa de oportunidade de economia em R$ por mês, e 3 ações concretas e específicas para os próximos 30 dias, calibradas para o seu provedor, setor e nível de gasto.",
       url: `${BASE_URL}/#diagnostico`,
     },
   ],
@@ -228,7 +228,7 @@ const faqSchema = {
       name: "O que é FinOps e por que empresas brasileiras precisam disso agora?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "FinOps (Financial Operations) é a prática que une engenharia, finanças e negócio para controlar e maximizar o retorno dos investimentos em cloud. No Brasil, empresas enterprise com gastos acima de R$ 100k/mês em AWS, Azure ou GCP desperdiçam em média 28-35% do budget — o equivalente a R$ 28k a R$ 35k a cada R$ 100k gastos. Com a pressão cambial sobre contratos dolarizados e a explosão dos custos de IA Generativa em 2025-2026, o FinOps deixou de ser opcional e virou prioridade de boardroom.",
+        text: "FinOps (Financial Operations) é a prática que une engenharia, finanças e negócio para controlar e maximizar o retorno dos investimentos em cloud. No Brasil, empresas enterprise com gastos acima de R$ 100k/mês em AWS, Azure ou GCP desperdiçam em média 28-35% do budget, o equivalente a R$ 28k a R$ 35k a cada R$ 100k gastos. Com a pressão cambial sobre contratos dolarizados e a explosão dos custos de IA Generativa em 2025-2026, o FinOps deixou de ser opcional e virou prioridade de boardroom.",
       },
     },
     {
@@ -236,7 +236,7 @@ const faqSchema = {
       name: "Quanto as empresas brasileiras desperdiçam em cloud por ano?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Segundo o relatório State of FinOps 2026 (FinOps Foundation) e dados da BCG, empresas sem práticas estruturadas de FinOps desperdiçam entre 28% e 35% do gasto mensal em cloud. Para uma empresa que gasta R$ 500k/mês, isso representa R$ 140k-175k desperdiçados todo mês — mais de R$ 1,6 milhão por ano. Os principais culpados: instâncias superprovisionadas, ambientes de desenvolvimento rodando 24/7, dados duplicados em múltiplos buckets e APIs de LLM sem rate limit.",
+        text: "Segundo o relatório State of FinOps 2026 (FinOps Foundation) e dados da BCG, empresas sem práticas estruturadas de FinOps desperdiçam entre 28% e 35% do gasto mensal em cloud. Para uma empresa que gasta R$ 500k/mês, isso representa R$ 140k-175k desperdiçados todo mês, mais de R$ 1,6 milhão por ano. Os principais culpados: instâncias superprovisionadas, ambientes de desenvolvimento rodando 24/7, dados duplicados em múltiplos buckets e APIs de LLM sem rate limit.",
       },
     },
     {
@@ -252,7 +252,7 @@ const faqSchema = {
       name: "O diagnóstico acessa meus sistemas ou dados internos?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Não. O diagnóstico é 100% baseado em perguntas objetivas sobre o seu perfil — provedor de cloud, faixa de gasto, setor e desafios. Nenhuma credencial, nenhum acesso a ambiente, nenhum dado sensível é coletado.",
+        text: "Não. O diagnóstico é 100% baseado em perguntas objetivas sobre o seu perfil (provedor de cloud, faixa de gasto, setor e desafios). Nenhuma credencial, nenhum acesso a ambiente, nenhum dado sensível é coletado.",
       },
     },
     {
@@ -276,7 +276,7 @@ const faqSchema = {
       name: "O que é LGPD e como ela se relaciona com governança de cloud?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A LGPD (Lei Geral de Proteção de Dados) exige que empresas saibam onde os dados pessoais estão armazenados, quem tem acesso e por quanto tempo são retidos. Isso cria uma intersecção direta com governança de cloud: sem visibilidade de cada conta cloud e bucket de dados, a empresa corre risco de não conformidade com a LGPD — além de pagar por dados que deveriam ter sido deletados. FinOps e LGPD andam juntos.",
+        text: "A LGPD (Lei Geral de Proteção de Dados) exige que empresas saibam onde os dados pessoais estão armazenados, quem tem acesso e por quanto tempo são retidos. Isso cria uma intersecção direta com governança de cloud: sem visibilidade de cada conta cloud e bucket de dados, a empresa corre risco de não conformidade com a LGPD, além de pagar por dados que deveriam ter sido deletados. FinOps e LGPD andam juntos.",
       },
     },
     {

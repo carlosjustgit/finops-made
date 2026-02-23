@@ -5,7 +5,7 @@ const problems = [
     icon: TrendingUp,
     title: "Custos imprevisíveis todo mês",
     description:
-      "Empresas enterprise no Brasil gastam até 35% acima do necessário em AWS, Azure e GCP. Recursos ociosos, instâncias superprovisionadas e ambientes de dev rodando 24/7 acumulam despesas invisíveis mês a mês — e ninguém fica sabendo até chegar a fatura.",
+      "Empresas enterprise no Brasil gastam até 35% acima do necessário em AWS, Azure e GCP. Recursos ociosos, instâncias superprovisionadas e ambientes de dev rodando 24/7 acumulam despesas invisíveis mês a mês, e ninguém fica sabendo até chegar a fatura.",
     stat: "35%",
     statLabel: "de desperdício médio no Brasil",
     source: "BCG Cloud Waste Report 2025",
@@ -14,7 +14,7 @@ const problems = [
     icon: EyeOff,
     title: "Visibilidade fragmentada",
     description:
-      "Sem uma visão unificada entre contas, provedores e squads, o CFO toma decisão às cegas. Data Lakes subutilizados, pipelines redundantes e dados duplicados drenam budget sem gerar valor — e sem aparecer em nenhum dashboard.",
+      "Sem uma visão unificada entre contas, provedores e squads, o CFO toma decisão às cegas. Data Lakes subutilizados, pipelines redundantes e dados duplicados drenam budget sem gerar valor e sem aparecer em nenhum dashboard.",
     stat: "64%",
     statLabel: "das empresas sem chargeback por time",
     source: "FinOps Foundation State of FinOps 2026",
@@ -50,7 +50,7 @@ export function ProblemBlocks() {
           <p className="text-[#7A8BA8] text-lg max-w-2xl mx-auto">
             Toda empresa brasileira com cloud acima de R$&nbsp;100k/mês enfrenta
             ao menos um desses desafios. A maioria enfrenta os três ao mesmo
-            tempo — e sem saber por onde começar a resolver.
+            tempo, sem saber por onde começar a resolver.
           </p>
         </div>
 

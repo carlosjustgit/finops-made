@@ -14,7 +14,7 @@ export function ActionsList({ actions }: ActionsListProps) {
   return (
     <div className="space-y-3">
       <h4 className="text-sm font-bold text-white/50 uppercase tracking-widest">
-        Top 3 ações — próximos 30 dias
+        Top 3 ações (próximos 30 dias)
       </h4>
       <div className="space-y-3">
         {actions.map((action, i) => {
