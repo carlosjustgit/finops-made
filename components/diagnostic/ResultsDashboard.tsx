@@ -7,6 +7,7 @@ import { ActionsList } from "./ActionsList";
 import { RiskChecklist } from "./RiskChecklist";
 import { CTAButton } from "@/components/ui/CTAButton";
 import { trackReviewClicked, trackPdfRequested } from "@/lib/tracking";
+import { generateDiagnosticPdf } from "@/lib/generatePdf";
 
 interface ResultsDashboardProps {
   result: DiagnosticResult;
@@ -138,7 +139,10 @@ export function ResultsDashboard({
         <CTAButton
           variant="secondary"
           fullWidth
-          onClick={() => trackPdfRequested(fitScore)}
+          onClick={() => {
+            trackPdfRequested(fitScore);
+            generateDiagnosticPdf(result, fitScore, monthlySpend);
+          }}
         >
           Baixar relatório completo em PDF
         </CTAButton>
